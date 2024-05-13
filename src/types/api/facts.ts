@@ -2,11 +2,11 @@ export interface Fact {
   id: number
   content: string
   points: number
-  costs: CostsFact
-  status: StatusFact
-  type: TypeFact
-  speed: SpeedFact
-  refuel: RefuelFact
+  costs?: CostsFact
+  status?: StatusFact
+  type?: TypeFact
+  speed?: SpeedFact
+  refuel?: RefuelFact
 }
 
 export type CostsFact = 'expensive' | 'medium' | 'cheap'

@@ -1,6 +1,6 @@
 import { Fact } from '@/types/api'
 
-export const facts: Fact[] = [
+export const factsDB: Fact[] = [
   {
     id: 0,
     content: 'Toyota Camry',

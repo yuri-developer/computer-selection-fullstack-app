@@ -1,18 +1,18 @@
-import { CostsFact, RefuelFact, SpeedFact, StatusFact, TypeFact } from '@/types/api/facts'
+import { CostsFact, Fact, RefuelFact, SpeedFact, StatusFact, TypeFact } from '@/types/api/facts'
 import { api } from './api'
 
 export type AddRequest = {
   content: string
-  costs: CostsFact
-  status: StatusFact
-  type: TypeFact
-  speed: SpeedFact
-  refuel: RefuelFact
+  costs?: CostsFact
+  status?: StatusFact
+  type?: TypeFact
+  speed?: SpeedFact
+  refuel?: RefuelFact
 }
 
 export default class FactService {
   static getAll = () => {
-    return api.get('/api/facts')
+    return api.get<Fact[]>('/api/facts')
   }
 
   static add = (addFact: AddRequest) => {

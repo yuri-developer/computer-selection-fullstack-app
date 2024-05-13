@@ -1,15 +1,15 @@
 import { NextResponse } from 'next/server'
-import { questions } from './questions'
+import { questionsDB } from './questions'
 
 export async function GET(req: Request) {
-  return NextResponse.json(questions)
+  return NextResponse.json(questionsDB)
 }
 
 export async function POST(req: Request) {
-  const id = questions.length
+  const id = questionsDB.length
   const content = await req.json()
 
-  questions.push({ id, content })
+  questionsDB.push({ id, content })
 
-  return NextResponse.json(questions[id])
+  return NextResponse.json(questionsDB[id])
 }

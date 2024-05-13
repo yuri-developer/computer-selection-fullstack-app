@@ -1,21 +1,27 @@
 import { Question } from '@/types/api'
 
-export const questions: Question[] = [
+export const questionsDB: Question[] = [
   {
     id: 0,
     content: 'Интересует ли вас седан?',
+    type: 'sedan',
   },
   {
     id: 1,
     content: 'Нужен ли вам автомобиль с большим количеством мест?',
+    type: 'jeep',
+    status: 'off-road',
   },
   {
     id: 2,
     content: 'Предпочитаете ли вы дизельный двигатель?',
+    refuel: 'fuel',
   },
   {
     id: 3,
     content: 'Нужен ли вам автомобиль с малым радиусом разворота?',
+    status: 'compact',
+    type: 'sedan',
   },
   {
     id: 4,
@@ -24,10 +30,13 @@ export const questions: Question[] = [
   {
     id: 5,
     content: 'Важно ли вам, чтобы ваш автомобиль был высокого статуса?',
+    status: 'premium',
   },
   {
     id: 6,
     content: 'Нужен ли вам полный привод?',
+    type: 'jeep',
+    status: 'off-road',
   },
   {
     id: 7,
@@ -40,14 +49,22 @@ export const questions: Question[] = [
   {
     id: 9,
     content: 'Важно ли вам экономичное топливопотребление?',
+    costs: 'cheap',
+    refuel: 'fuel',
+    type: 'sedan',
+    status: 'family',
   },
   {
     id: 10,
     content: 'Важно ли вам большое пространство для багажа?',
+    type: 'crossover',
+    status: 'family',
   },
   {
     id: 11,
     content: 'Будете ли вы ездить по бездорожью?',
+    type: 'jeep',
+    status: 'off-road',
   },
   {
     id: 12,
@@ -56,10 +73,14 @@ export const questions: Question[] = [
   {
     id: 13,
     content: 'Важно ли вам динамичное ускорение?',
+    costs: 'medium',
+    status: 'sport',
   },
   {
     id: 14,
     content: 'Нужен ли вам компактный автомобиль?',
+    status: 'compact',
+    type: 'sedan',
   },
   {
     id: 15,
@@ -72,18 +93,24 @@ export const questions: Question[] = [
   {
     id: 17,
     content: 'Интересует ли вас эксклюзивная марка автомобиля?',
+    costs: 'expensive',
+    status: 'premium',
   },
   {
     id: 18,
     content: 'Готовы ли вы тратить много на ремонт и обслуживание?',
+    costs: 'expensive',
+    status: 'premium',
   },
   {
     id: 19,
     content: 'Важно ли вам, чтобы ваш автомобиль соответствовал экологическим нормам?',
+    refuel: 'electrical energy',
   },
   {
     id: 20,
     content: 'Интересует ли вас гибридный автомобиль?',
+    refuel: 'electrical energy',
   },
   {
     id: 21,
@@ -107,7 +134,7 @@ export const questions: Question[] = [
   },
   {
     id: 26,
-    content: 'Важно ли вам наличие системы адаптивного круиз-контроля (Adaptive Cruise Control)?',
+    content: 'Важно ли вам наличие системы адаптивного круиз-контроля?',
   },
   {
     id: 27,
@@ -115,14 +142,16 @@ export const questions: Question[] = [
   },
   {
     id: 28,
-    content: 'Предпочитаете ли вы автомобиль с системой определения местоположения (GPS)?',
+    content: 'Предпочитаете ли вы автомобиль с системой определения местоположения?',
   },
   {
     id: 29,
     content: 'Подходит ли вам семейный автомобиль?',
+    status: 'family',
   },
   {
     id: 30,
     content: 'Интересуют ли вас электромобили?',
+    refuel: 'electrical energy',
   },
 ]
